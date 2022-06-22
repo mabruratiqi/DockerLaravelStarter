@@ -21,7 +21,7 @@ services:
       - APP_DEBUG=${APP_DEBUG:-true}
       - APP_KEY=${APP_KEY:-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX}
       - APP_ENV=${APP_ENV:-local}
-      - APP_URL=${APP_URL:-http://mabrur-laravel-starter}
+      - APP_URL=${APP_URL:-http://localhost}
       - LOG_CHANNEL=${LOG_CHANNEL:-stderr}
       - LOG_STDERR_FORMATTER=${LOG_STDERR_FORMATTER:-Monolog\Formatter\JsonFormatter}
       - DB_CONNECTION=${DB_CONNECTION:-mysql}
@@ -65,7 +65,17 @@ services:
       - MYSQL_USER=${DB_USERNAME:-phper}
       - MYSQL_PASSWORD=${DB_PASSWORD:-secret}
       - MYSQL_ROOT_PASSWORD=${DB_PASSWORD:-secret}
-
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "7000:80"
+    links:
+      - db:db
+    environment:
+      MYSQL_USER: phper
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
   mailhog:
     image: mailhog/mailhog
     ports:
