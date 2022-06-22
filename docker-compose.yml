@@ -61,11 +61,21 @@ services:
         volume:
           nocopy: true
     environment:
-      - MYSQL_DATABASE=${DB_DATABASE:-laravel}
-      - MYSQL_USER=${DB_USERNAME:-phper}
+      - MYSQL_DATABASE=${DB_DATABASE:-laravel-starter}
+      - MYSQL_USER=${DB_USERNAME:-root}
       - MYSQL_PASSWORD=${DB_PASSWORD:-secret}
       - MYSQL_ROOT_PASSWORD=${DB_PASSWORD:-secret}
-
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "7000:80"
+    links:
+      - db:db
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
   mailhog:
     image: mailhog/mailhog
     ports:
