@@ -25,7 +25,7 @@ $ make install-recommend-packages # Optional
 
 site domain : http://localhost
 
-db access : http://localhost:7000
+phpmyadmin access : http://localhost:7000
 
 ## Tips
 
