@@ -9,9 +9,6 @@
     <img src="https://img.shields.io/github/license/ucan-lab/docker-laravel" alt="License">
 </p>
 
-## Introduction
-
-Build a simple laravel development environment with docker-compose. Compatible with Windows(WSL2), macOS(M1) and Linux.
 
 ## Usage
 
@@ -19,8 +16,10 @@ Build a simple laravel development environment with docker-compose. Compatible w
 2. Execute the following command
 
 ```bash
-$ make create-project # Install the latest Laravel project
-$ make install-recommend-packages # Optional
+$ docker-compose up
+$ docker-compose exec app bash
+$ composer install
+
 ```
 
 site domain : http://localhost
