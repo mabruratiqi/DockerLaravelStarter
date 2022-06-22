@@ -21,7 +21,7 @@ services:
       - APP_DEBUG=${APP_DEBUG:-true}
       - APP_KEY=${APP_KEY:-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX}
       - APP_ENV=${APP_ENV:-local}
-      - APP_URL=${APP_URL:-http://localhost}
+      - APP_URL=${APP_URL:-http://mabrur-laravel-starter}
       - LOG_CHANNEL=${LOG_CHANNEL:-stderr}
       - LOG_STDERR_FORMATTER=${LOG_STDERR_FORMATTER:-Monolog\Formatter\JsonFormatter}
       - DB_CONNECTION=${DB_CONNECTION:-mysql}
