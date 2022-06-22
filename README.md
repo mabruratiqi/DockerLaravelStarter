@@ -23,7 +23,8 @@ $ make create-project # Install the latest Laravel project
 $ make install-recommend-packages # Optional
 ```
 
-http://localhost
+site domain : http://localhost
+db access : http://localhost:7000
 
 ## Tips
 
