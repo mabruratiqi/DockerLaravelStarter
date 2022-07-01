@@ -55,6 +55,11 @@ phpmyadmin access : http://localhost:7000
 
 - Base image
   - [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
+  
+ ### php my admin 
+
+- Base image
+  - phpmy admin image
 
 ### mailhog container
 
